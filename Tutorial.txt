@@ -30,4 +30,6 @@ mostra a legenda dos padding p1,p-2 e etc pode converter rem em pixel no google 
 
 14: Outra opção de aplicar o css é como usar no React criando um arquivo module.css na pasta do componente e chamando ele com:
  import styles from './' e na tag : <div className={styles.nomeClasse}>
-desse jeito tambem é possivel combinar tailwindcss  global com css local concatenando:  <div className={'p-4'+styles. nomeClasse}>   
+desse jeito tambem é possivel combinar tailwindcss  global com css local concatenando:  <div className={'p-4'+styles. nomeClasse}>  
+
+15:transferir os links de pages/index.js pra a <div> de components/header/index.js , depois com o tailwind centralizei os links e sublinhei com o hover
