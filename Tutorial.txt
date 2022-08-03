@@ -3,4 +3,5 @@
 3: inserir scripts : "dev": "next",
     "start":"next start",
     "build": "next build"
-4:criar o .gitIgnore e colocar o node_modules dentro    
+4:criar o .gitIgnore e colocar o node_modules dentro
+5: Em pages criei o About.js que é página sobre da app    
