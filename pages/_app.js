@@ -1,13 +1,18 @@
 import React from 'react';
+import Footer from '../components/footer';
+import Header from '../components/header';
 
 import '../css/styles.css'
 
 const MyApp = ({ Component, pageProps }) => {
     return (
-        <div>
-          <h1 className=' bg-yellow-100 sm:bg-gray-700 md:bg-red-900 p-8 lg:bg-purple-600'>MyApp</h1>
-    
-          <Component {...pageProps}/>
+        <div >
+          <Header/>
+           <div className='container mx-auto h-screen' >
+              <Component {...pageProps}/>
+           </div>
+           <Footer/>
+          
         </div>
     
     

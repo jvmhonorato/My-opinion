@@ -16,8 +16,18 @@
 
 8:Instalar o TailwindCSS: seguindo a documentação pra next: https://tailwindcss.com/docs/guides/nextjs
 
-9: criei em pages _app.js configurando pra ser chamado em todas as pages usando props e spread operators assmi o conteúdo de _app apareerar em toas as páginas
+9: Criei em pages _app.js configurando pra ser chamado em todas as pages usando props e spread operators assim o conteúdo de _app aparecerar em todas as páginas
 
 10: dando o import: import '../css/styles.css' na page _app.js todas as páginas carregarão o TailwindCSS
 
-11: Testanto o response design. Na documentação do tailwindcss mostra  a faixa de pixels pra a mudança de layout de acordo com o tamanho da tela
+11: Testanto o response design. Na documentação do tailwindcss mostra  a faixa de pixels pra a mudança de layout de acordo com o tamanho da tela,
+mostra a legenda dos padding p1,p-2 e etc pode converter rem em pixel no google pr ter uma noção, pesquinsamos tambem no tailwind container tambem tem sua legenda sm, md, lg, xl,2xl com seus determinados tamanhos em pixels
+
+12: inserir na diva principal de _app.js :
+<div className='container mx-auto'> pra centralizar a tela apenas na <div> titulo e nos <Component/> 
+
+13: Na raiz do projeto criar a pasta component/header/index.js  criei o componete Header tranferir as <div> correpondente ao header depois importei o component de volta ao _app.js
+
+14: Outra opção de aplicar o css é como usar no React criando um arquivo module.css na pasta do componente e chamando ele com:
+ import styles from './' e na tag : <div className={styles.nomeClasse}>
+desse jeito tambem é possivel combinar tailwindcss  global com css local concatenando:  <div className={'p-4'+styles. nomeClasse}>   
