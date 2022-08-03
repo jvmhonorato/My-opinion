@@ -14,4 +14,10 @@
 
 7: criamos a page search.js com a func component padrão
 
-8:
+8:Instalar o TailwindCSS: seguindo a documentação pra next: https://tailwindcss.com/docs/guides/nextjs
+
+9: criei em pages _app.js configurando pra ser chamado em todas as pages usando props e spread operators assmi o conteúdo de _app apareerar em toas as páginas
+
+10: dando o import: import '../css/styles.css' na page _app.js todas as páginas carregarão o TailwindCSS
+
+11: Testanto o response design. Na documentação do tailwindcss mostra  a faixa de pixels pra a mudança de layout de acordo com o tamanho da tela
