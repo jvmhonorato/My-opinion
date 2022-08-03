@@ -1,0 +1,6 @@
+1: dar o comando: npm init -y pra criar package.json
+2: dar o comando:  npm install next react react-dom
+3: inserir scripts : "dev": "next",
+    "start":"next start",
+    "build": "next build"
+4:criar o .gitIgnore e colocar o node_modules dentro    
