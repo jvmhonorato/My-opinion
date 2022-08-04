@@ -33,3 +33,7 @@ mostra a legenda dos padding p1,p-2 e etc pode converter rem em pixel no google 
 desse jeito tambem é possivel combinar tailwindcss  global com css local concatenando:  <div className={'p-4'+styles. nomeClasse}>  
 
 15:transferir os links de pages/index.js pra a <div> de components/header/index.js , depois com o tailwind centralizei os links e sublinhei com o hover
+
+16: criei com componente layout/index.js nele tranferimos a chmda do component header e footer com seus imports no parâmetro do component inserimos o {children} e depois chamamos o childre dentro da div principal, dessa forma no componente _app.js importamos o layout e envolvemos  o component :<Layout><Component {...pageProps}/></Layout>
+
+17:
