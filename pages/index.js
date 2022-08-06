@@ -15,7 +15,7 @@ const Index = () => {
             </Link>
             
         </div>
-        {/*condicional implícita em IF em React: se não tiver DATA ele mostra Carregando... se tiver ele mostra os dados em <p>*/}
+        {/*condicional implícita de IF em React: se não tiver DATA ele mostra Carregando... se tiver ele mostra os dados em <p>*/}
         {!data && <p>Carregando...</p>}
             {data && data.showCoupon &&
             <p className='my-12 text-center'>
