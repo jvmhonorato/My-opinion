@@ -18,7 +18,7 @@ const Search = () => {
        const data = response.json()
        console.log(data)
     }catch(err) {
-        
+         
     }
     }
     return (
