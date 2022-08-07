@@ -6,9 +6,9 @@ const Search = () => {
     //Função responsável em mandar os dador pra API
     const save = async () => {
        const form = {
-        Nome:'Agda',
-        Email:'agda@gmail.com',
-        Whatsapp:'71 986554514'
+        Nome:'Hanna',
+        Email:'hanna@gmail.com',
+        Whatsapp:'71 9864544514'
        }
        try {
        const response = await fetch('/api/save' , {

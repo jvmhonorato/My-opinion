@@ -16,17 +16,18 @@ export default async(req, res) => {
     
         //Nome	Email	Whatsapp	Cupom	Promo
         await sheet.addRow({
-            Nome:'Victor Honorato',
-            Email: 'vituhonorato.89@gmail.com',
-            Whatsapp: '71 987840407',
-            Cupom: 'aefdtw1232',
-            Promo: 'asdhgjhjka'
+            Nome:data.Nome,
+            Email: data.Email,
+            Whatsapp: data.Whatsapp,
+            Cupom: data.Cupom,
+            Promo: data.Promo
     
         })
+        res.end(req.body)
     
      } catch (err) {
         console.log(err)
      }
-    console.log(JSON.parse(req.body))
-    res.end(req.body)
+    
+    
 }
