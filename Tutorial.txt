@@ -50,3 +50,19 @@ palpitebox@palpitebox-358500.iam.gserviceaccount.com dai eu vou n google planilh
 22: em seguida no arquivo connect.js eu importo com require o modulo GoolgeSpreadsheet e o credentials.json crio a promise pra chamar a planilha utilizando o trecho da URL da planilha
 
 23: Copiei o arquivo connect e rename to load-config.js e nele inserimos o codigo na função asyncrona estanciando a planilha de configurações depoois referênciando o raio de pesquisa com loadcells e capturando o valor pela linha e coluna declarada
+
+24: Criar add-row.js e lá capturamos a planilha usando o sheeByIndex[] depois usando o await usamos o sheet.addRow pra inserir os valores de acordo com a referência das celulas da planilha
+
+25:J na pasta do PalpiteBox dar um : npm install swr
+
+26: Pracriar uma API no NextJS: em pages crio uma pasta API/get-promo.js e criar função async com req e res
+
+27: em index.js importar o swr depois cria um fetch retornando JSON() entanciando em fetcher e usa como segundo parâmetro do useSWR('caminho dos dados/fetcher') que server pra buscar os dados da app tetsa com :
+return (<pre>{JSON.stringify(data)}</pre>) pra ver se retona
+
+28:Na page/search.js criar <input onClick={save}> com a mesma classe de style do botão da página index.js criei a função save async  retornando uma função form e mandamos esse dados pra api da app com o fetch usando o metodo POST        
+29: Em api criar o arquivo save.js que será onde os arquivos serão salvos
+
+30: copiar arquivo credentials.json pra a pasta do projeto depois copiar a função async do load-config.js pra get-promo.js. Modificar o require pra import e  configurar toda a function async detalhes comentados no codigo e instalar : npm install google-spreadsheet
+
+31:configurando o arquivo save.js colocar os imports com os modulos pertinentes e configurando a função async deixando ela dinâmica
