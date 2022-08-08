@@ -6,6 +6,11 @@ import credentials from '../../credentials.json';
 //id da URL da planilha 
 const doc = new GoogleSpreadsheet('1Wa4rPaJCRDJU6gbkzq99pDdBjhSvYiOj-pHBbPG8r9k')
 
+const genCupom = () => {
+    const code = parseInt(moment().format('YYMMDDHHmmssSSS')).toString(16).toUpperCase()
+    return code.substring(0, 4) + '-' + code.substring(4, 8) +'-' + code.substring(8,12)
+}
+
 
 export default async(req, res) => {
     try {
@@ -29,7 +34,7 @@ export default async(req, res) => {
          let Promo = ''
 
         if(mostrarPromocaoCell.value === 'VERDADEIRO'){
-             Cupom = 'temporário'
+             Cupom = genCupom()
              Promo =textoCell.value
         }   
         
@@ -39,7 +44,7 @@ export default async(req, res) => {
             Nome:data.Nome,
             Email: data.Email,
             Whatsapp: data.Whatsapp,
-            'Data Preenchimento':moment().format('DD/MM/YYYY, HH:mm:ss'),
+            'Data Preenchimento':moment().format('DD/MM/YYYY, HH:mm:ss SSS'),
             Cupom,
             Promo
            
