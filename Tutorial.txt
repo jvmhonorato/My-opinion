@@ -66,3 +66,19 @@ return (<pre>{JSON.stringify(data)}</pre>) pra ver se retona
 30: copiar arquivo credentials.json pra a pasta do projeto depois copiar a função async do load-config.js pra get-promo.js. Modificar o require pra import e  configurar toda a function async detalhes comentados no codigo e instalar : npm install google-spreadsheet
 
 31:configurando o arquivo save.js colocar os imports com os modulos pertinentes e configurando a função async deixando ela dinâmica
+
+32: copiar dados da const sheet que captura as celulas da planilha  do arquivo  get-promo.js  e jogar em save.js
+pra estaelecer conexão com a planilha 02 no arquivo save.js pra poder add cumpom
+
+33:criar let cupom e let promo e usar uma condicional  que se o itend da planilha [2] tiver marcado e vai gerar o cupom, adicionei  a planilha o campo data de preenchimento e nó coodigo pus ela pr gerar um new Date(), pra poder gerar o o horário local corretamente instala o : npm install moment --save, dar o import do moment e substituir o new Date() por "moment().format('DD/MM/YYYY, HH:mm:ss')"
+
+34:Pra gerar o cupom: vamos por esse formato moment() no Cupom juntando todos os caracters, temos que incluir no momente a escala SSS de milisegundo pra não ter chance de gerar 2 cupons iguais em seguida tambem vamos acresentar o parseInt pra trnaformar os numeros em hexadeciamal, um toString e por último um toUpperCase() pra deixar caixa alta parseInt(moment().format('DDMMYYYYHHmmsSSS')).toString(16).toUpperCase()
+
+35: entanciar o o moment() em uma função genCupom e no return usar substr() pra dividir em grupos
+
+36:FORMULÁRIO em search. js add <input> pra cada tipo de dado com seus respectivos placeholders, importar o useState() criar o state form, setForm e colocar o formulario dentro do objeto do state colocar um  
+<pre>{JSON.stringify(form, null, 2)}</pre>dentro do return pra ver o formato do state form renderizado
+
+37:a base de programar formulários começa com a criação de um state em seguida com cria-se uma função com uma ação e por ultimo chama essa função dentro do onChange que está no corpo do <input>, sendo assim constroi a função onChange pra renderizar o valor digitado simuntaneamente 
+
+38: proximo passo é add propriedades name='Nome'name='Whatsapp' name='Email'que são o nomes dos campos que vão receber valores nos <input> depois crio uma const key recebendo evt.target.name ai dentro do setForm eu ponho [key]=value, agora os dados digitados no <input> rebderizarão no form com ajuda do setForm basta salvar que ele vai direto pra planilha

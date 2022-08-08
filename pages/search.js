@@ -7,6 +7,8 @@ const Search = () => {
         Email:'',
         Whatsapp:''
        })
+       const [success, setSuccess] = useState(false)
+       const [retorno, setRetorno] = useState({})
 
     //Função responsável em mandar os dador pra API
     const save = async () => {
@@ -16,8 +18,9 @@ const Search = () => {
         method: 'POST',
         body:JSON.stringify(form)
        })
-       const data = response.json()
-       console.log(data)
+       const data = await response.json()
+       setSuccess(true)
+       setRetorno(data)
     }catch(err) {
          
     }
@@ -38,7 +41,9 @@ const Search = () => {
             <h1 className='text-center font-bold my-4 text-2xl'>Críticas e sugestões</h1>
             <p className='text-center'>O restaurante X sempre busca por atender melhor seus clientes.<br/>
             Por isso, estamos sempre abertos a ouvir a sua opiniao.</p>
-            <div className='w-48 mx-auto '>
+            
+            {!success &&
+                <div className='w-48 mx-auto '>
 
                 <label className='font-bold ' >Seu nome:</label>
                 <input type='text' className='p-4 block drop-shadow-lg bg-blue-100 m-2 rounded' placeholder='Nome' onChange={onChange} name='Nome'/>
@@ -52,7 +57,25 @@ const Search = () => {
                 <pre>
                     {JSON.stringify(form, null, 2)}
                 </pre>
-            </div>
+                </div>}
+                 {success && <div className='w-48 mx-auto ' >
+                    <p className='mt-6 mb-6 text-center bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3'> Obrigado por contribui com sua sugestão ou crítica.</p>
+                    {
+                        retorno.showCoupon && 
+                            <div className='text-center border p-4 mb-6'>
+                                
+                            <span className='font-bold '>{retorno.Cupom}</span>
+                            </div>
+                    }
+                    {
+                        retorno.showCoupon && 
+                            <div className='text-center border p-4 mb-6'>
+                                
+                            <span className='font-bold '>{retorno.Promo}</span>
+                            </div>
+                    }
+               
+                </div>}
            
         </div>
     )
