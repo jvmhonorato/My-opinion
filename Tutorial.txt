@@ -38,13 +38,13 @@ desse jeito tambem é possivel combinar tailwindcss  global com css local concat
 
 17:Criando o layout da página de pesquisa/search
 
-18: criar planilha com 3 abas a prmeira: é sumário apresentação com logo, a segunda é resultado/Pesquisa, e a terceria:Configurações 
+18: Criar planilha com 3 abas a prmeira: é sumário apresentação com logo, a segunda é resultado/Pesquisa, e a terceria:Configurações 
 
-19: acessar google developer console iniciar projetos, dar um nome e buscar API em: + ativar APIS e SERVIÇOS procurar por spreadsheets e ativar
+19: Acessar google developer console iniciar projetos, dar um nome e buscar API em: + ativar APIS e SERVIÇOS procurar por spreadsheets e ativar
 
-20: selecionar a opção credenciais/ gerenciar contas serviços/ criar contas de serviço/ adicionar permissão de conta de serviço criar conta depois da conta criada,clicar em 3pontos a esquerda da tela e gerenciar chaves criar chave JSON. depois disso vai gerar um arquivo que vamos jogar numa pasta criada ao lado da pasta Palpitebox
+20: Selecionar a opção credenciais/ gerenciar contas serviços/ criar contas de serviço/ adicionar permissão de conta de serviço criar conta depois da conta criada,clicar em 3pontos a esquerda da tela e gerenciar chaves criar chave JSON. depois disso vai gerar um arquivo que vamos jogar numa pasta criada ao lado da pasta Palpitebox
 
-21: renomear arquivo .json pra credentials.json depois na mesma pasta criar connect.js, dar : npm init -y e npm install google-spreadsheet depois em google cloud eu copio o email de serviso gerado na criação da API:
+21: Renomear arquivo .json pra credentials.json depois na mesma pasta criar connect.js, dar : npm init -y e npm install google-spreadsheet depois em google cloud eu copio o email de serviso gerado na criação da API:
 palpitebox@palpitebox-358500.iam.gserviceaccount.com dai eu vou n google planilha e em compartilhar e colo esse email e compartilho
 
 22: em seguida no arquivo connect.js eu importo com require o modulo GoolgeSpreadsheet e o credentials.json crio a promise pra chamar a planilha utilizando o trecho da URL da planilha
@@ -63,14 +63,14 @@ return (<pre>{JSON.stringify(data)}</pre>) pra ver se retona
 28:Na page/search.js criar <input onClick={save}> com a mesma classe de style do botão da página index.js criei a função save async  retornando uma função form e mandamos esse dados pra api da app com o fetch usando o metodo POST        
 29: Em api criar o arquivo save.js que será onde os arquivos serão salvos
 
-30: copiar arquivo credentials.json pra a pasta do projeto depois copiar a função async do load-config.js pra get-promo.js. Modificar o require pra import e  configurar toda a function async detalhes comentados no codigo e instalar : npm install google-spreadsheet
+30: Copiar arquivo credentials.json pra a pasta do projeto depois copiar a função async do load-config.js pra get-promo.js. Modificar o require pra import e  configurar toda a function async detalhes comentados no codigo e instalar : npm install google-spreadsheet
 
-31:configurando o arquivo save.js colocar os imports com os modulos pertinentes e configurando a função async deixando ela dinâmica
+31:Configurando o arquivo save.js colocar os imports com os modulos pertinentes e configurando a função async deixando ela dinâmica
 
-32: copiar dados da const sheet que captura as celulas da planilha  do arquivo  get-promo.js  e jogar em save.js
+32: Copiar dados da const sheet que captura as celulas da planilha  do arquivo  get-promo.js  e jogar em save.js
 pra estaelecer conexão com a planilha 02 no arquivo save.js pra poder add cumpom
 
-33:criar let cupom e let promo e usar uma condicional  que se o itend da planilha [2] tiver marcado e vai gerar o cupom, adicionei  a planilha o campo data de preenchimento e nó coodigo pus ela pr gerar um new Date(), pra poder gerar o o horário local corretamente instala o : npm install moment --save, dar o import do moment e substituir o new Date() por "moment().format('DD/MM/YYYY, HH:mm:ss')"
+33:Criar let cupom e let promo e usar uma condicional  que se o itend da planilha [2] tiver marcado e vai gerar o cupom, adicionei  a planilha o campo data de preenchimento e nó coodigo pus ela pr gerar um new Date(), pra poder gerar o o horário local corretamente instala o : npm install moment --save, dar o import do moment e substituir o new Date() por "moment().format('DD/MM/YYYY, HH:mm:ss')"
 
 34:Pra gerar o cupom: vamos por esse formato moment() no Cupom juntando todos os caracters, temos que incluir no momente a escala SSS de milisegundo pra não ter chance de gerar 2 cupons iguais em seguida tambem vamos acresentar o parseInt pra trnaformar os numeros em hexadeciamal, um toString e por último um toUpperCase() pra deixar caixa alta parseInt(moment().format('DDMMYYYYHHmmsSSS')).toString(16).toUpperCase()
 
@@ -82,3 +82,15 @@ pra estaelecer conexão com a planilha 02 no arquivo save.js pra poder add cumpo
 37:a base de programar formulários começa com a criação de um state em seguida com cria-se uma função com uma ação e por ultimo chama essa função dentro do onChange que está no corpo do <input>, sendo assim constroi a função onChange pra renderizar o valor digitado simuntaneamente 
 
 38: proximo passo é add propriedades name='Nome'name='Whatsapp' name='Email'que são o nomes dos campos que vão receber valores nos <input> depois crio uma const key recebendo evt.target.name ai dentro do setForm eu ponho [key]=value, agora os dados digitados no <input> rebderizarão no form com ajuda do setForm basta salvar que ele vai direto pra planilha
+
+39: Agora é mostrar no Fronf o cupom que foi gerado na planilha. EM api/save.js abaixo de sheet.addRow modificamos o res.end({}) botemops um condicional dentro showCupom onde o primeiro parâmetro que é a condição se retornar diferente de vazio la na planilha ou seja se não foi gerado mostrar e segundo e terceiro que é Cupomm e Promo 
+
+40:EM search.js  abaixo do state form crio um novo state success começando em false e um state retorno com um objeto dentro depois ponho setSuccess(true) setRetorno(data) na func save abaixo de const data
+
+41: Envolvo a <div> dos inputs com o objeto success fazendo um condicional caso esteja vazio retornar os dados, no retorno dos dados criamos dois objetos pra renderizar os dados na tela com estilo "retorno.showCoupon && retorno.Cupom" e "retorno.showCoupon && retorno.Promo" dessa forma 
+
+42: Pra acresentar o radius radius button eu acresentei mais uma propriedade no state form a "Nota", em seguida eu criei um novo <input> com type radius e uma propriedade name= recebendo a propriedade Nota
+
+43: criar uma const notas = [1,2,3,4,5], em seguida eu chamamos notas.map(nota =><input/>) depois acrecentar a função onchange no input radius fomratar o css 
+
+44: Depois na api/save.js eu incluno no await sheet.addRow no campo Nota:parseInt(data.Nota)

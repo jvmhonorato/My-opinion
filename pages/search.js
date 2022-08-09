@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import Link from 'next/Link'
 import { moment } from 'moment'
+import PageTitle from '../components/pageTitle'
 
 const Search = () => {
     const [form, setForm] = useState({
@@ -42,7 +43,9 @@ const Search = () => {
         }) )
     }
     return (
+        
         <div className='pt-6'>
+            <PageTitle title='Pesquisa'/>
             <h1 className='text-center font-bold my-4 text-2xl'>Críticas e sugestões</h1>
             <p className='text-center'>O restaurante X sempre busca por atender melhor seus clientes.<br/>
             Por isso, estamos sempre abertos a ouvir a sua opiniao.</p>

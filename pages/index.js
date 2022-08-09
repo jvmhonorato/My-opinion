@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import useSWR from 'swr';
+import PageTitle from '../components/pageTitle';
 
 const fetcher = (...args) => fetch(...args).then(res => res.json())
  
@@ -9,6 +10,7 @@ const Index = () => {
     
     return (
     <div>
+         <PageTitle title='Home'/>
         <h1 className="mt-13 text-center text-2xl" >O estabelecimneto X sempre busca por atender melhor seus clientes.</h1>
         <div className='text-center my-12  '>
             <Link href="/search">
