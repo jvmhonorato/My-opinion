@@ -1,6 +1,5 @@
 import React,{useState} from 'react'
-import Link from 'next/Link'
-import { moment } from 'moment'
+
 import PageTitle from '../components/pageTitle'
 
 const Search = () => {
