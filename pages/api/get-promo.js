@@ -18,7 +18,7 @@ export default async (req, res) => {
         //await doc.useServiceAccountAuth(credentials)
         await doc.useServiceAccountAuth({
             client_email:process.env.SHEET_CLIENT_EMAIL,
-            private_key:process.env.SHEET_CLIENT_KEY 
+            private_key:fromBase64(process.env.SHEET_CLIENT_KEY )
         })
         await doc.loadInfo()
         console.log()
