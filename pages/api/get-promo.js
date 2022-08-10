@@ -5,6 +5,11 @@ import {  GoogleSpreadsheet } from 'google-spreadsheet';
 //id da URL da planilha 
 const doc = new GoogleSpreadsheet(process.env.SHEET_DOC_ID)
 
+const fromBase64 = value => {
+    const buff = new Buffer.from(value, 'base64');
+    return buff.toString('ascii')
+}
+
 
 
 export default async (req, res) => {
