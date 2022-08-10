@@ -1,5 +1,6 @@
 import {  GoogleSpreadsheet } from 'google-spreadsheet';
 import moment from 'moment';
+import { fromBase64 } from '../../utils/base64';
 
 
 //id da URL da planilha 
@@ -15,7 +16,7 @@ export default async(req, res) => {
     try {
         await doc.useServiceAccountAuth({
             client_email:process.env.SHEET_CLIENT_EMAIL,
-            private_key:process.env.SHEET_CLIENT_KEY 
+            private_key:fromBase64(process.env.SHEET_CLIENT_KEY) 
         })
         await doc.loadInfo()
         //Pegar planilha 1
