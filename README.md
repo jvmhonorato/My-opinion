@@ -58,9 +58,9 @@ https://user-images.githubusercontent.com/101150943/205424494-3e1cb3a8-0b85-4f75
 ## Features
 
 The main features of the application are:
- - Publish Posts.
- - Learn a lot of information <3
-
+ - Fill in the form with customer data
+ - Give a note to the service
+ - Show the property owner the data in a spreadsheet
 
 ## Links
   - Deploy on Vercel: https://palpite-box-ten-rouge.vercel.app/
