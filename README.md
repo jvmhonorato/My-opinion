@@ -30,10 +30,14 @@ Here are the technologies used in this project.
   - google-spreadsheet
   
 * To install the dependencies.
-  - npm install
+```bash
+  $ npm install
+  ```
   
 * To run the project.
-  - npm start
+```bash
+  $ npm run start
+  ```
 
 ## How to use
 
