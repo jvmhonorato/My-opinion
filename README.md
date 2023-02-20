@@ -11,7 +11,7 @@ Here are the technologies used in this project.
 * Next JS
 * React JS
 * TailwindCSS
-* google-spreadsheet
+* Google-SpreadSheet
 
 ## Services Used
 
