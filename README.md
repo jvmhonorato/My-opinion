@@ -4,7 +4,7 @@
 Model tool to stimulate sales, giving 10% discount to each opinion on the products.
 
 
-## Technology 
+## Technologies 
 
 Here are the technologies used in this project.
 
