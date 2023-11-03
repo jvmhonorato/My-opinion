@@ -4,14 +4,25 @@
 Model tool to stimulate sales, giving 10% discount to each opinion on the products.
 
 
+![palpitebox2](https://user-images.githubusercontent.com/101150943/205424160-7ec46a71-1bf0-456e-81da-138a374e2d45.jpg)
+
+
 ## Technologies 
 
-Here are the technologies used in this project.
 
-* Next JS
-* React JS
-* TailwindCSS
-* Google-SpreadSheet
+<div style="display: inline_block"><br/>
+  <img align="center" alt="jvmh-typescript" height="50" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
+  <img align="center" alt="jvmh-nextjs" height="50" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" />
+<img align="center" alt="jvmh-reactjs" height="50" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+ <img align="center" alt="jvmh-nodejs" height="50" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg" />
+ <img align="center" alt="jvmh-googleclouds" height="50" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" />
+<img align="center" alt="jvmh-tailwindcss" height="50" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" />
+
+
+
+
+
+</div>
 
 ## Services Used
 
@@ -39,24 +50,10 @@ Here are the technologies used in this project.
   $ npm run start
   ```
 
-## How to use
-
-### 1 - When you access, you will see the main page, click in button "Dar sua opnião"  
-
-![palpitebox1](https://user-images.githubusercontent.com/101150943/205424036-631e2e47-1373-46de-8102-3ac22dc722ab.jpg)
 
 
-### 2 - On this page you will enter your data and give a note to the service enjoyed and submit!
 
-![palpitebox2](https://user-images.githubusercontent.com/101150943/205424160-7ec46a71-1bf0-456e-81da-138a374e2d45.jpg)
 
-### 3 - On this page you will have thanks and guidance to show the code generated in the next purchase!
-
-![palpitebox3](https://user-images.githubusercontent.com/101150943/205424180-800ed469-7f9a-43f4-8c2c-394d2b300920.jpg)
-
-### 4 - Customer data will be dynamically sent to a spreadsheet in the seller's google docs
-
-https://user-images.githubusercontent.com/101150943/205424494-3e1cb3a8-0b85-4f75-88d3-d1dbfd4edcee.mp4
 
 
 ## Features
