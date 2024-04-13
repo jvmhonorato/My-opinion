@@ -4,7 +4,7 @@
 Model tool to stimulate sales, giving 10% discount to each opinion on the products.
 
 
-![palpitebox2](https://user-images.githubusercontent.com/101150943/205424160-7ec46a71-1bf0-456e-81da-138a374e2d45.jpg)
+
 
 
 ## Technologies 
@@ -64,8 +64,8 @@ The main features of the application are:
  - Show the property owner the data in a spreadsheet
 
 ## Links
-  - Deploy on Vercel: https://palpite-box-ten-rouge.vercel.app/
-  - Repository: https://github.com/vituhonorato/PalpiteBox
+
+  - Repository: https://github.com/Honorato-Dev/My-opinon
     - In case of sensitive bugs like security vulnerabilities, please contact
       vituhonorato.89@gmail.com directly instead of using issue tracker. We value your effort
       to improve the security and privacy of this project!
