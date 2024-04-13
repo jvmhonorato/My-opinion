@@ -1,6 +1,6 @@
 
 
-## PalpiteBox
+## My Opinion
 Model tool to stimulate sales, giving 10% discount to each opinion on the products.
 
 
