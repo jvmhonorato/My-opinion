@@ -33,7 +33,7 @@ The Customer Opinion Evaluation Web Application is a web platform developed to c
 1. **Clone the application repository from GitHub:**
 
     ```bash
-    git clone <repository_URL>
+    git clone git@github.com:Honorato-Dev/My-opinion.git
     ```
 
 2. **Navigate to the project directory:**
