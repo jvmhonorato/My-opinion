@@ -1,7 +1,11 @@
+# My Opinion
+
+## Overview
+The Customer Opinion Evaluation Web Application is a web platform developed to collect feedback from customers about products or services. This document provides technical information on how to configure, implement, and integrate the application. The main technologies used are Babel, Eslint, SWR, google-spreadsheet, Next.js, and Tailwind CSS.
 
 
-## My Opinion
-Model tool to stimulate sales, giving 10% discount to each opinion on the products.
+
+![layout](https://github.com/Honorato-Dev/My-opinion/assets/101150943/e315781b-147c-4bdb-8f75-3eec3aef1fc1)
 
 
 
@@ -18,50 +22,74 @@ Model tool to stimulate sales, giving 10% discount to each opinion on the produc
  <img align="center" alt="jvmh-googleclouds" height="50" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" />
 <img align="center" alt="jvmh-tailwindcss" height="50" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
 
+## System Requirements
 
+- Node.js
+- NPM (Node Package Manager) or Yarn
+- Google Spreadsheet API Key
 
+## Development Environment Setup
 
+1. **Clone the application repository from GitHub:**
 
-</div>
+    ```bash
+    git clone <repository_URL>
+    ```
 
-## Services Used
+2. **Navigate to the project directory:**
 
-* Github
-* Vercel
-* Google Cloud API
+    ```bash
+    cd project_name
+    ```
 
+3. **Install project dependencies:**
 
+    ```bash
+    npm install
+    ```
+    or
+    ```bash
+    yarn install
+    ```
 
-## Getting started
+4. **Configure environment variables:**
 
-* Dependency
-  - Babel 
-  - Eslint
-  - SWR
-  - google-spreadsheet
-  
-* To install the dependencies.
+    Create a `.env.local` file in the project root and add the following variables:
+
+    ```plaintext
+    GOOGLE_API_KEY=YourAPIKey
+    SHEET_DOC_ID = <id of the  google docs SHEET>
+    SHEET_CLIENT_EMAIL = private key do service credential 
+    SHEET_CLIENT_KEY = <private key of services credentials> 
+
+    Replace `YourAPIKey` with your Google Spreadsheet API key.
+
+## Google Spreadsheet Setup
+
+1. **Create a spreadsheet in Google Spreadsheet with the necessary columns to store customer feedback.**
+2. **Share the spreadsheet with the service account that will be used to access it.**
+
+## Development
+
+To start the development server, run the following command:
+
 ```bash
-  $ npm install
-  ```
-  
-* To run the project.
-```bash
-  $ npm run start
-  ```
+npm run dev
+```
+
+##Integration with Other Systems
+The Customer Opinion Evaluation Web Application can be easily integrated with other systems through APIs or webhooks. You can use the provided APIs to send feedback to other systems or integrate Google Spreadsheet data with existing systems.
+
+##References
+  - Next.js Documentation
+  - Tailwind CSS Documentation
+  - SWR Documentation
+  - Google Spreadsheet API Documentation
+  - This is a basic guide for setting up, developing, and deploying the Customer Opinion Evaluation Web Application. For more details on implementation and customization, refer to the official documentation of the technologies used
 
 
 
 
-
-
-
-## Features
-
-The main features of the application are:
- - Fill in the form with customer data
- - Give a note to the service
- - Show the property owner the data in a spreadsheet
 
 ## Links
 
@@ -72,7 +100,7 @@ The main features of the application are:
 
   ## Versioning
 
-  1.0.0.0
+  2.0.0.0
 
 
   ## Authors
