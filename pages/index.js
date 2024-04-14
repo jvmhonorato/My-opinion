@@ -9,7 +9,7 @@ const Index = () => {
     const { data, error } = useSWR('/api/get-promo', fetcher );
     
     return (
-    <div className='flex h-screen align-middle items-center'>
+    <div className='flex flex-col '>
          <PageTitle title='Home'/>
         <h1 className="mt-13 text-center text-2xl" >O estabelecimneto X sempre busca por atender melhor seus clientes.</h1>
         <div className='text-center my-12  '>
