@@ -9,12 +9,12 @@ const Index = () => {
     const { data, error } = useSWR('/api/get-promo', fetcher );
     
     return (
-    <div>
+    <div className='flex h-screen align-middle items-center'>
          <PageTitle title='Home'/>
         <h1 className="mt-13 text-center text-2xl" >O estabelecimneto X sempre busca por atender melhor seus clientes.</h1>
         <div className='text-center my-12  '>
             <Link href="/search">
-                <a className='bg-blue-400 px-6 py-4 font-bolt rounded-lg drop-shadow-lg hover:drop-shadow-2xl font-bold text-lg '>Dar opinião ou sugestão</a>
+                <p className='bg-blue-400 px-6 py-4 font-bolt rounded-lg drop-shadow-lg hover:drop-shadow-2xl font-bold text-lg '>Dar opinião ou sugestão</p>
             </Link>
             
         </div>

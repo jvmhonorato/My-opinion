@@ -8,9 +8,9 @@ const About = () => {
         <h1>Sobre</h1>
         <PageTitle title='Sobre'/>
         <Link href="/" >
-            <a>
+            <p>
                 Home
-            </a>
+            </p>
         </Link>
         </div>
     )

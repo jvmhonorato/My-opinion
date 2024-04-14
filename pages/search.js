@@ -43,14 +43,14 @@ const Search = () => {
     }
     return (
         
-        <div className='pt-6'>
+        <div className='flex flex-col pt-6 max-w-2xl '>
             <PageTitle title='Pesquisa'/>
             <h1 className='text-center font-bold my-4 text-2xl'>Críticas e sugestões</h1>
             <p className='text-center'>O restaurante X sempre busca por atender melhor seus clientes.<br/>
             Por isso, estamos sempre abertos a ouvir a sua opiniao.</p>
             
             {!success &&
-                <div className='w-48 mx-auto '>
+                <div className='flex flex-col align-middle justify-center '>
 
                 <label className='font-bold ' >Seu nome:</label>
                 <input type='text' className='p-4 block drop-shadow-lg bg-blue-100 m-2 rounded' placeholder='Nome' onChange={onChange} name='Nome'/>
