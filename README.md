@@ -95,7 +95,7 @@ The Customer Opinion Evaluation Web Application can be easily integrated with ot
 
   - Repository: https://github.com/Honorato-Dev/My-opinon
     - In case of sensitive bugs like security vulnerabilities, please contact
-      vituhonorato.89@gmail.com directly instead of using issue tracker. We value your effort
+      honorato.ofc@gmail.com directly instead of using issue tracker. We value your effort
       to improve the security and privacy of this project!
 
   ## Versioning
